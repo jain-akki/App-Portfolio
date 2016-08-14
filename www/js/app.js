@@ -4,6 +4,7 @@
 
   angular.module('githubPortfolio', [
     'ionic',
+    'ionic.service.core',
     'ngCordova'
   ]);
 

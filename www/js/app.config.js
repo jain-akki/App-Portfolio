@@ -20,12 +20,13 @@
     .run(function ($rootScope, $state, authService, $cordovaDialogs) {
 
       $rootScope.$on('$stateChangeStart', function (event, next, nextParams, fromState) {
-        //console.log('isAuthenticated: ', authService.isAuthenticated());
-        if (!authService.isAuthenticated()) {
+        
+        var user = Ionic.User.current();
+
+        if (!user.isAuthenticated()) {
           if (next.name != 'login') {
-            //console.log('login');
             event.preventDefault();
-            $state.go("login");
+            $state.go('login');
           }
         }
       });
@@ -38,13 +39,11 @@
         var internetConnected = true;
 
         document.addEventListener('online', function(){
-          alert('Online!!');
           if (internetConnected) return;
           internetConnected = true;
         }, false);
 
         document.addEventListener('offline', function(){
-          alert('Offline!!');
           if (!internetConnected) return;
           internetConnected = false;
           offlineConnection();
