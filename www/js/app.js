@@ -3,7 +3,8 @@
   'use strict';
 
   angular.module('githubPortfolio', [
-    'ionic'
+    'ionic',
+    'ngCordova'
   ]);
 
 })();
