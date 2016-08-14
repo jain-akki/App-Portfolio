@@ -45,6 +45,12 @@
 
       $urlRouterProvider.otherwise('/main/gitProfile');
     })
+
+    .config(function ($ionicConfigProvider) {
+      $ionicConfigProvider.backButton.icon('ion-android-arrow-back');
+      $ionicConfigProvider.backButton.previousTitleText(false).text('');
+    })
+
    .run(function ($ionicPlatform) {
      $ionicPlatform.ready(function () {
        
