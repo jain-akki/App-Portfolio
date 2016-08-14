@@ -33,9 +33,6 @@
 
       document.addEventListener("deviceready", function () {
 
-        $cordovaDialogs.alert('Any Random Description!!!!', 'Title', 'Retry').then(function () {
-        });
-
         var internetConnected = true;
 
         document.addEventListener('online', function(){
