@@ -13,13 +13,14 @@
 
         console.log('Doing login', vm.loginData);
         
-        var options = { 'remember': true };
+        var options = { 'remember': false };
 
         Ionic.Auth.login('basic', options, vm.loginData).then(function (success) {
           console.log('Successfully!! Login');
           $state.go('main.gitProfile');
+          vm.loginData = {};
         }, function (error) {
-          console.log('Login Failure!!');
+          alert('Login Failure!!');
         });
 
       };

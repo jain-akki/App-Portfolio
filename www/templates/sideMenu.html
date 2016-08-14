@@ -18,14 +18,17 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close href="#/main/gitProfile">
-          Git Portfolio
+        <ion-item class="item-icon-left" menu-close href="#/main/gitProfile">
+          <i class="icon ion-social-github"></i> Git Portfolio
         </ion-item>
-        <ion-item menu-close href="#/main/personalProfile">
-          Personal Portfolio
+        <ion-item class="item-icon-left" menu-close href="#/main/personalProfile">
+          <i class="icon ion-ios-person"></i> Personal Portfolio
         </ion-item>
-        <ion-item menu-close href="#/main/aboutMe">
-          About Me 
+        <ion-item class="item-icon-left" menu-close href="#/main/aboutMe">
+          <i class="icon ion-ios-grid-view-outline"></i> About Me
+        </ion-item>
+        <ion-item class="item-icon-left" ng-click="vm.logout()">
+          <i class="icon ion-power"></i> Logout
         </ion-item>
       </ion-list>
     </ion-content>
