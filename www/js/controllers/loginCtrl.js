@@ -22,9 +22,10 @@
           vm.loginData = {};
         }, function (error) {
           customService._off();
-          $cordovaDialogs.alert('Incorrect!! Login details. Pls, Try again with valid details', 'Alert', 'Retry').then(function () {
-            vm.loginData = {};
-          });
+          $cordovaDialogs.alert('Incorrect!! Login details. Pls, Try again with valid details', 'Alert', 'Retry')
+            .then(function () {
+              vm.loginData = {};
+            });
         });
 
       };
